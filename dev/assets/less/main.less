@@ -1,0 +1,109 @@
+@import "lib";
+@import "ui";
+@import "scrlock";
+
+body {
+	// background: @bg-color-splash;
+	overflow-x: hidden;
+}
+
+
+
+// header on the left side of page 
+header#left {
+	z-index: 999;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: @sidebar-width;
+	height: 100%;
+	display: flex;
+	align-items: center;	
+
+	#logo {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: @sidebar-width;
+		height: @sidebar-width;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: 5px;
+
+		img {
+			width: 28px;
+			height: 28px;
+		}
+
+		opacity: 0;
+		transform: scale(.9);
+		transition: all ease 200ms;
+	}
+
+	#title {
+		width: @sidebar-width;
+		width: @sidebar-width;
+		line-height: @sidebar-width;
+
+		transform: rotate(270deg);
+		white-space: nowrap;
+    	display: block;
+
+		color: @white;
+		text-align: center;
+		text-transform: uppercase;
+		
+	}
+}
+
+header#left:hover #logo {
+	opacity: 1;
+	transform: scale(1);
+}
+
+
+// opening scene 
+section#splash {
+	z-index: 9;
+	height: 100%;
+
+	.carousel {
+		width: 100%;
+		height: 100%;
+
+		.item {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+
+
+			transition: all ease 600ms;
+
+
+		}
+		.i1 {
+			background: red;
+		}
+		.i2 {
+			background: yellow;
+		}
+		.i3 {
+			background: blue;
+		}
+	}	
+
+}
+
+// website content
+section#content {
+	min-height: 1450px;
+}
+
+
+// footer & footer content
+footer#bottom {
+	height: 175px;
+	background: @accent-main;
+}
