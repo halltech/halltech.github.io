@@ -112,6 +112,15 @@ section#splash .carousel .item {
   text-align: center;
   color: white;
 }
+section#splash .carousel .i1 {
+  background: red;
+}
+section#splash .carousel .i2 {
+  background: yellow;
+}
+section#splash .carousel .i3 {
+  background: blue;
+}
 section#content {
   min-height: 1450px;
 }
