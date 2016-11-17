@@ -41,7 +41,7 @@ function callback () {
 		}
 
 		if (carousels[i].style.left != "0px") {
-			carousels[i].style.opacity = "0.5";
+			carousels[i].style.opacity = "0.3";
 			carousels[i].style.transform = "scale(.8)";
 		} else {
 			carousels[i].style.opacity = "1.0";
