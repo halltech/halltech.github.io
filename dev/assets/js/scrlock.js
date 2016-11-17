@@ -20,6 +20,11 @@ var specialItems = [
 		color1: "#FFF"
 	},
 	{
+		item: "div.carousel-mask",
+		color0: "#000",
+		color1: "#FFF"
+	},
+	{
 		item: "section#content",
 		color0: "#000",
 		color1: "#FFF"
@@ -47,7 +52,7 @@ var listItems = document.querySelectorAll("body .scrlock");
 // node list of all scroll lock items
 var specialDOM = addSpecialItems(specialItems);
 
-
+console.log(specialDOM)
 
 
 function addSpecialItems (list) {
@@ -68,15 +73,17 @@ function addSpecialItems (list) {
 
 function scrolling (e) {
 
-	if (isPartiallyVisible(specialDOM[3])) {
+	if (isPartiallyVisible(specialDOM[4])) {
 		toggleOn(0, "background");
 		toggleOn(1, "color");
+		toggleOn(3, "border-color");
 	} else {
 		// header
 		// toggleOff(0, "color");
 		// splash
 		toggleOff(0, "background");
 		toggleOff(1, "color");
+		toggleOff(3, "border-color");
 	}
 	
 	

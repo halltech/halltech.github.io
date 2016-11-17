@@ -25,7 +25,7 @@ function setup () {
 }
 
 
-var intervalID = window.setInterval(callback, 2500);
+var intervalID = window.setInterval(callback, 6000);
 
 var intervalCounter = 0;
 
@@ -38,6 +38,14 @@ function callback () {
 		
 		if(index/2 == WIDTH) {
 			carousels[i].style.left = (0).toString() + "px";
+		}
+
+		if (carousels[i].style.left != "0px") {
+			carousels[i].style.opacity = "0.5";
+			carousels[i].style.transform = "scale(.8)";
+		} else {
+			carousels[i].style.opacity = "1.0";
+			carousels[i].style.transform = "scale(1.0)";
 		}
 	}
 	intervalCounter++;

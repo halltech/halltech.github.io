@@ -19,6 +19,7 @@ header#left {
 	height: 100%;
 	display: flex;
 	align-items: center;	
+	padding-bottom: @splash-offset;
 
 	#logo {
 		position: fixed;
@@ -43,17 +44,18 @@ header#left {
 
 	#title {
 		width: @sidebar-width;
-		width: @sidebar-width;
+		width: 170px;
 		line-height: @sidebar-width;
 
 		transform: rotate(270deg);
 		white-space: nowrap;
     	display: block;
 
-		color: @white;
 		text-align: center;
 		text-transform: uppercase;
-		
+		margin-left: -60px;
+		mix-blend-mode: exclusion;
+		color: @white;
 	}
 }
 
@@ -77,25 +79,58 @@ section#splash {
 			height: 100%;
 			position: absolute;
 			top: 0;
+			display: flex;
+			align-items: center;
+  			justify-content: flex-end;
 
-
-			transition: all ease 600ms;
+  			opacity: 1;
+  			transform: scale(1);
+			transition: left ease 600ms, 
+					    opacity ease 1500ms,
+					    transform ease 600ms;
 			text-align: center;
 			color: white;
 
+			.title-ext {
+				width: 50%;
+				min-width: 300px;
+				text-align: left;
+				padding-bottom: @splash-offset;
+			}
 		}
 		.i1 {
-			background: red;
+			// background: red;
+			background: url(../res/bg1.jpg);
 		}
 		.i2 {
-			background: yellow;
+			// background: yellow;
+			background: url(../res/bg2.jpg);
 		}
 		.i3 {
-			background: blue;
+			// background: blue;
+			background: url(../res/bg3.jpg);
 		}
 	}	
 
+
+	
+
 }
+
+.carousel-mask {
+	z-index: 100;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	border: 40px solid;
+	border-color: black;
+
+}
+
+
 
 // website content
 section#content {
