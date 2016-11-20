@@ -7,55 +7,81 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto:500,300,200,700,400' rel='stylesheet' type='text/css'>
 
 	<!-- less sheets MUST go before the compiler -->
-	<link rel="stylesheet" type="text/css" href="assets/less/main.css">
+	<link rel="stylesheet" type="text/less" href="assets/less/main.less">
 
+	<!-- Less CSS link NOT FOR PRODUCTION -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.min.js"></script>
 
 
 
 </head>
 
 <body class="scrlock scr-quick">
-	<header id="left">
+	<header id="left" class="scr-quick">
 		<div id="logo">
 			<img src="assets/res/LogoDark.png"">
 		</div>
-		<div class="scr-quick" id="title">Hall Technologies</div>
+		<div id="title">Hall Technologies</div>
+		<div id="menu">
+			<!-- <img src="assets/res/menu.png"> -->
+		</div>
 	</header>
 
 	<section class="scrlock" id="splash">
 		<div class="carousel">
 			<div class="item i1">
 				<div class="title-ext">
-					<div class="hr"></div>
-					<h1>Project 1</h1>
-					<h2>Web/Design Project</h2>
+					<div class="hr splash"></div>
+					<h1 class="splash">Project 1</h1>
+					<h2 class="splash">Web/Design Project</h2>
 				</div>
 			</div>
 			<div class="item i2">
 				<div class="title-ext">
-					<div class="hr"></div>
-					<h1>Project 2</h1>
-					<h2>Web/Design Project</h2>
+					<div class="hr splash"></div>
+					<h1 class="splash">Project 2</h1>
+					<h2 class="splash">Web/Design Project</h2>
 				</div>
 			</div>
 			<div class="item i3">
 				<div class="title-ext">
-					<div class="hr"></div>
-					<h1>Project 3</h1>
-					<h2>Web/Design Project</h2>
+					<div class="hr splash"></div>
+					<h1 class="splash">Project 3</h1>
+					<h2 class="splash">Web/Design Project</h2>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<div class="scrlock scr-quick carousel-mask"></div>
+	<div class="scrlock scr-quick carousel-mask">
+		<div id="left"></div>
+		<div id="right"></div>
+		<div id="top"></div>
+		<div id="bottom"></div>
+	</div>
 
 	<section class="scrlock" id="content">
-		<h1>Hello</h1>
+		<article>
+			<div class="hr"></div>
+			<h1 class="">Project 3</h1>
+			<h2 class="">Web/Design Project</h2>
+		</article>
 
 	</section>
 
-	<footer id="bottom"></footer>
+	<footer id="bottom">
+		<div id="color"></div>
+		<div id="content">
+			<div id="left">&copy Copyright 2015 Hall Technologies.</div>
+			<div id="right">
+				<span class="color1"><a href="index.html">Home</a></span>
+				<span class="color2"><a href="index.html">Portfolio</a></span>
+				<span class="color3"><a href="index.html">About</a></span>
+				<span class="color4"><a href="index.html">Team</a></span>
+				<span class="color5"><a href="index.html">Contact</a></span></div>
+		</div>
+	</footer>
+
 
 
 	<!-- Scroll Lock -->

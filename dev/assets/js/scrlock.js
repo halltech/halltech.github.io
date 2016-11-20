@@ -1,23 +1,25 @@
 // SCROLL LOCK 
 // css scrolling animation library
 
+
+
 var isScrolling = false;
 
 var specialItems = [
 	{
 		item: "body",
 		color0: "#000",
-		color1: "#FFF"
+		color1: "#fff"
 	},
 	{
-		item: "header#left #title",
+		item: "header#left",
 		color0: "#FFF",
 		color1: "#000"
 	},
 	{
 		item: "section#splash",
 		color0: "#000",
-		color1: "#FFF"
+		color1: "#fff"
 	},
 	{
 		item: "div.carousel-mask",
@@ -27,7 +29,7 @@ var specialItems = [
 	{
 		item: "section#content",
 		color0: "#000",
-		color1: "#FFF"
+		color1: "#fff"
 	}
 ]
 
@@ -76,14 +78,16 @@ function scrolling (e) {
 	if (isPartiallyVisible(specialDOM[4])) {
 		toggleOn(0, "background");
 		toggleOn(1, "color");
-		toggleOn(3, "border-color");
+		toggleOff(1, "background");
+		toggleOn(3, "background");
 	} else {
 		// header
 		// toggleOff(0, "color");
 		// splash
 		toggleOff(0, "background");
 		toggleOff(1, "color");
-		toggleOff(3, "border-color");
+		toggleOn(1, "background");
+		toggleOff(3, "background");
 	}
 	
 	

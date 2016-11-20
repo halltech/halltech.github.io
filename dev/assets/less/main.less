@@ -57,6 +57,26 @@ header#left {
 		mix-blend-mode: exclusion;
 		color: @white;
 	}
+
+	#menu {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: @sidebar-width;
+		white-space: nowrap;
+    	display: block;
+    	text-align: center;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: 5px;
+
+		img {
+			width: 28px;
+			height: 28px;
+		}
+	}
 }
 
 header#left:hover #logo {
@@ -119,14 +139,49 @@ section#splash {
 
 .carousel-mask {
 	z-index: 100;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	background: transparent;
-	border: 40px solid;
-	border-color: black;
+
+
+	width: 0;
+	height: 0;
+
+	#left {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: @sidebar-width;
+		height: 100%;
+		background: inherit;
+	}
+	#right {
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: @sidebar-width;
+		height: 100%;
+		background: inherit;
+	}
+	#top {
+		position:  fixed;
+		top: 0;
+		left: 0;
+		height: @sidebar-width;
+		width: 100%;
+		background: inherit;
+	}
+	#bottom {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		height: @sidebar-width;
+		width: 100%;
+		background: inherit;
+	}
 
 }
 
@@ -135,11 +190,76 @@ section#splash {
 // website content
 section#content {
 	min-height: 1450px;
+	padding: @sidebar-width;
+	padding-top: 0;
 }
 
 
 // footer & footer content
 footer#bottom {
-	height: 175px;
+	height: auto;
 	background: @accent-main;
+	padding-left: @sidebar-width;
+	padding-right: @sidebar-width;
+	color: white;
+
+	a {
+		margin-left: 5px;
+		margin-right: 5px;
+		text-decoration: none;
+		color: inherit;
+		font-weight: 400;
+		transition: color ease 300ms;
+		cursor: pointer;
+		overflow: hidden;
+	}
+	a:hover {
+		color: #FFF;
+		font-weight: 400;
+	}
+	
+
+	#color {
+		width: 100%;
+		height: 3px;
+		background: linear-gradient(
+			to right, #DC8022 0,
+			#DC8022 10%,#C70404 20%,
+			#C70404 30%,#30119A 40%,
+			#30119A 50%,#BF1BAE 60%,
+			#BF1BAE 70%,#702076 80%,
+			#702076 90%);
+	}
+	#content {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		line-height: @sidebar-width;
+
+		#left {
+			width: 50%;
+			display: block;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		#right {
+			width: 50%;
+			float: right;
+			.color1 {
+				color: #DC8022;
+			}
+			.color2 {
+				color: #C70404;
+			}
+			.color3 {
+				color: #30119A;
+			}
+			.color4 {
+				color: #BF1BAE;
+			}
+			.color5 {
+				color: #702076;
+			}
+		}
+	}
 }

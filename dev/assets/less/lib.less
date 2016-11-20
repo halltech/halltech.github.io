@@ -36,12 +36,13 @@ section, article, footer, h1 {
 
 div.hr {
 	width: 22px;
-	background: #FFF;
+	background: #000;
 	height: 2px;
 	float: left;
 	margin: 0;
 	border-radius: 1px;
-	.blend;
+
+
 }
 
 h1 {
@@ -50,20 +51,36 @@ h1 {
 	font-size: 44px;
 	margin-top: 14px;
 	margin-bottom: 10px;
-	.blend;
+	color: black;
 }
 h2 {
 	text-transform: uppercase;
 	font-weight: 400;
 	font-size: 16px;
 	margin: 0;
-	.blend;
+	color: black;
 }
 
 
 
-h1.splash {
+h1.splash, h2.splash {
 	color: #FFF;
+	.blend;
 	
 }
+div.splash.hr {
+	background: #FFF;
+	.blend
+}
 
+
+article {
+
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	text-decoration: underline;
+	color: darkblue;
+}
