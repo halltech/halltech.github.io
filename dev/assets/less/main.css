@@ -71,6 +71,89 @@ a {
   text-decoration: underline;
   color: darkblue;
 }
+div.fade {
+  z-index: 100000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  animation: 4s fadeIn .5s forwards;
+  background: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.fade img {
+  width: 50px;
+  animation: grow 2s 5 ease-in-out;
+  opacity: .3;
+}
+@keyframes fadeIn {
+  from {
+    background: #FFF;
+    opacity: 1;
+  }
+  15% {
+    background: #000;
+    opacity: 1;
+  }
+  55% {
+    background: #000;
+    opacity: 1;
+  }
+  99% {
+    background: #000;
+    opacity: 0;
+  }
+  to {
+    background: #000;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes grow {
+  from {
+    transform: scale(0.5);
+    opacity: .3;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.5);
+    opacity: .3;
+  }
+}
+.element {
+  height: 250px;
+  width: 250px;
+  margin: 0 auto;
+  background-color: red;
+  animation-name: stretch;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+@keyframes stretch {
+  0% {
+    transform: scale(0.3);
+    background-color: red;
+    border-radius: 100%;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    transform: scale(1.5);
+    background-color: yellow;
+  }
+}
 /* colors */
 /* inherited colors */
 /* dimensions */
