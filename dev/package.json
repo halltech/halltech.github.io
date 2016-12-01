@@ -1,0 +1,7 @@
+{
+	"devDependencies": {},
+	"scripts": {
+		"scss-compile": "node-sass -rw src -o css",
+		"watch": "npm run scss-compile"
+  }
+}
