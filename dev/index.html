@@ -5,23 +5,15 @@
 	<meta charset="utf-8"/>
 	<link rel="shortcut icon" href="assets/res/Logo.png">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:500,300,200,700,400' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
 	<!-- less sheets MUST go before the compiler -->
 	<link rel="stylesheet" type="text/css" href="assets/less/main.css">
 
 	<!-- Less CSS link NOT FOR PRODUCTION -->
 	<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.min.js"></script> -->
-
-
-
 </head>
-
-<!-- <seciton class="before">
-	<div class="opening">
-		<img src="assets/res/LogoDark.png">
-	</div>
-</seciton>
- -->
 
 <body class="scrlock scr-quick">
 
@@ -31,7 +23,6 @@
 			<img src="assets/res/LogoDark.png">
 		</div>
 
-		<!-- <div class="element"></div> -->
 
 	</div>
 	
@@ -40,8 +31,60 @@
 			<img src="assets/res/LogoDark.png">
 		</div>
 		<div id="title">Hall Technologies</div>
-		<div id="menu">
-			<!-- <img src="assets/res/menu.png"> -->
+
+
+		<!-- shifted to right side -->
+		<!-- <div class="root">
+			<i class="material-icons">menu</i>
+			<div id="menu">
+				<div class="item blank">
+					
+				</div>	
+				<div class="item" id="sub">
+					<i class="material-icons">person</i>
+				</div>	
+				<div class="item" id="sub">
+					<i class="material-icons">photo</i>
+				</div>	
+				<div class="item" id="sub">
+					<i class="material-icons">mail</i>
+				</div>	
+			</div>
+		</div> -->
+		<div class="menu">
+			<div class="item-shell">
+				<div class="item">
+					<div class="button">
+						<i class="material-icons">person</i>
+					</div>
+					
+					<div class="popout">Meet The Team</div>
+				</div>
+	
+				<div class="item">
+					<div class="button">
+						<i class="material-icons">photo</i>
+					</div>
+					
+					<div class="popout">See Our Portfolio</div>
+				</div>
+	
+				<div class="item">
+					<div class="button">
+						<i class="material-icons">mail</i>
+					</div>
+					
+					<div class="popout">Contact Us</div>
+				</div>
+	
+				<div class="item">
+					<div class="button">
+						<i class="material-icons">get_app</i>
+					</div>
+					
+					<div class="popout">Get Our Apps</div>
+				</div>
+			</div>
 		</div>
 	</header>
 
@@ -72,17 +115,37 @@
 	</section>
 
 	<div class="scrlock scr-quick carousel-mask">
-		<div id="left"></div>
-		<div id="right"></div>
+		<!-- <div id="left"></div> -->
+		<div id="right">
+			
+		</div><!-- 
+		</div> -->
 		<div id="top"></div>
-		<div id="bottom"></div>
+		<div id="bottom">
+			<!-- <i id="scroll-down" class="material-icons">mail</i> -->
+		</div>
 	</div>
 
 	<section class="scrlock" id="content">
 		<article>
 			<div class="hr"></div>
-			<h1 class="">Project 3</h1>
-			<h2 class="">Web/Design Project</h2>
+			<h1>Hello</h1>
+			<h2>A Message From Our Team</h2>
+			<p>
+				Hall Technologies started off as only an idea. A hope in the minds of independent developers to provide people with quality websites. Today, our dream is a reality. Spanning two continents, we work together to give our clients what they need. Whether it be a family business, a school, or a large corporation, we put our best foot forward in ensuring the quality you deserve.
+			</p>
+			<p>
+				We've been small. We've been big.
+			</p>
+			<p class="signature">
+				<i>{Founding Four} - Dec. 2016</i>
+			</p>
+		</article>
+		<article>
+			<div class="hr"></div>
+			<h1>Project 3</h1>
+			<h2>Web/Design Project</h2>
+			<p>Lorem ipsum Do amet nisi elit incididunt dolore fugiat culpa consequat quis consectetur proident ut ea aliquip officia Excepteur ad cillum do consectetur aute ut officia Excepteur laborum nulla officia laboris esse mollit anim proident sed nisi ut do reprehenderit in laborum ullamco ut ea voluptate labore ullamco quis aute nisi adipisicing consectetur exercitation Ut tempor adipisicing tempor adipisicing cupidatat Ut proident nisi reprehenderit enim sed Duis culpa anim voluptate officia sit aute nostrud pariatur anim ullamco occaecat culpa sed aliquip elit culpa proident reprehenderit culpa nostrud veniam laborum do cillum voluptate sint incididunt anim dolore sunt ut velit veniam sint ut est sunt qui dolor dolore ut enim deserunt est eu ex est laborum non in in esse Duis elit velit anim veniam consectetur exercitation sunt aliquip occaecat exercitation sit dolore labore do qui ut sunt cillum laborum reprehenderit sit adipisicing proident do pariatur cillum reprehenderit sit est dolore sed aute velit laboris qui aliquip officia Duis proident dolore et cupidatat fugiat irure adipisicing dolor cupidatat ad dolor reprehenderit nostrud cillum fugiat proident qui fugiat anim nulla culpa eu culpa eiusmod cillum ut reprehenderit ex ad laborum.</p>
 		</article>
 
 	</section>
@@ -107,4 +170,33 @@
 	<script src="assets/js/scrlock.js"></script>
 	<!-- Carousels -->
 	<script src="assets/js/carousel.js"></script>
+	<!-- Scroll into View -->
+	<script>
+		window.bringIntoView_started = 0;
+		window.bringIntoView_ends = 0;
+		window.bringIntoView_y = 0;
+		window.bringIntoView_tick = function() {
+		  var distanceLeft, dt, duration, t, travel;
+		  t = Date.now();
+		  if (t < window.bringIntoView_ends) {
+		    dt = t - window.bringIntoView_started;
+		    duration = window.bringIntoView_ends - window.		bringIntoView_started;
+		    distanceLeft = window.bringIntoView_y - document.body.		scrollTop;
+		      travel = distanceLeft * (dt / duration);
+		      document.body.scrollTop += travel;
+		      window.requestAnimationFrame(window.bringIntoView_tick		);
+		  } else {
+		    document.body.scrollTop = window.bringIntoView_y;
+		  }
+		};
+		window.bringIntoView = function(e, duration) {
+		  window.bringIntoView_started = Date.now();
+		  window.bringIntoView_ends = window.bringIntoView_started +		 duration;
+		  window.bringIntoView_y = Math.min(document.body.scrollTop 		+ e.getBoundingClientRect().top, document.body.		scrollHeight - window.innerHeight);
+		  window.requestAnimationFrame(window.bringIntoView_tick);
+		};
+		var button = document.querySelector("down");
+		bringIntoView(document.querySelector('#bottom'), 400)
+
+	</script>
 </body>

@@ -9,7 +9,6 @@ html, body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	font-family: 'Roboto', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, p, section, article, footer {
@@ -37,7 +36,7 @@ section, article, footer, h1 {
 div.hr {
 	width: 22px;
 	background: #000;
-	height: 2px;
+	height: @line-width;
 	float: left;
 	margin: 0;
 	border-radius: 1px;
@@ -75,7 +74,11 @@ div.splash.hr {
 
 
 article {
-
+	margin-top: 40px;
+	padding: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+	border-left: @line-width solid black;
 }
 
 a {
@@ -83,4 +86,12 @@ a {
 	padding: 0;
 	text-decoration: underline;
 	color: darkblue;
+}
+
+
+.signature {
+	width: 100%;
+	text-align: right;
+	font-family: "Consolas", monospace;
+
 }
