@@ -82,6 +82,57 @@ a {
   text-align: right;
   font-family: "Consolas", monospace;
 }
+.collage {
+  width: 100%;
+  height: 200px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  /* one item */
+  /* two items */
+  /* three items */
+  /* four items */
+}
+.collage span {
+  width: 20%;
+  height: 100%;
+  background: red;
+  transition: transform 200ms ease;
+}
+.collage span:hover {
+  transform: scale(0.95);
+}
+.collage span:first-child:nth-last-child(1) {
+  width: 100%;
+}
+.collage span:first-child:nth-last-child(2),
+.collage span:first-child:nth-last-child(2) ~ span {
+  width: 50%;
+}
+.collage span:first-child:nth-last-child(3),
+.collage span:first-child:nth-last-child(3) ~ span {
+  width: 33.3333%;
+}
+.collage span:first-child:nth-last-child(4),
+.collage span:first-child:nth-last-child(4) ~ span {
+  width: 25%;
+}
+.collage #n1 {
+  background: url("../res/forest.jpg");
+}
+.collage #n2 {
+  background: url("../res/peak.jpg");
+}
+.collage #n3 {
+  background: url("../res/lighthouse.jpg");
+}
+.collage #n4 {
+  background: url("../res/surf.jpg");
+}
+.collage #n5 {
+  background: url("../res/forest.jpg");
+}
 div.fade {
   z-index: 100000;
   position: fixed;
@@ -89,27 +140,28 @@ div.fade {
   left: 0;
   height: 100%;
   width: 100%;
-  animation: 0.0s fadeIn .5s forwards;
+  animation: 1500ms fadeIn forwards;
   background: #FFF;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 div.fade img {
-  width: 50px;
-  animation: grow 2s 5 ease-in-out;
-  opacity: .3;
+  width: 70px;
+  opacity: 1;
+  position: relative;
+  opacity: 0.3;
+  animation: 1500ms linear moveLogo;
 }
 @keyframes fadeIn {
   from {
     background: #FFF;
+  }
+  50% {
+    background: #FFF;
     opacity: 1;
   }
-  15% {
-    background: #000;
-    opacity: 1;
-  }
-  55% {
+  60% {
     background: #000;
     opacity: 1;
   }
@@ -123,18 +175,16 @@ div.fade img {
     visibility: hidden;
   }
 }
-@keyframes grow {
+@keyframes moveLogo {
   from {
-    transform: scale(0.8);
     opacity: .3;
+    transform: scale(1);
   }
-  50% {
-    transform: scale(1.5);
+  60% {
     opacity: 1;
   }
   to {
-    transform: scale(0.8);
-    opacity: .3;
+    opacity: 1;
   }
 }
 .element {
@@ -309,6 +359,38 @@ header#left #title {
   display: none;
   visibility: hidden;
   height: 100%;
+  width: 100%;
+}
+.menu .item-shell .item .popout .image {
+  width: 100%;
+  height: 100%;
+}
+.menu .item-shell .item .popout #n1 {
+  background: url("../res/forest.jpg");
+}
+.menu .item-shell .item .popout #n2 {
+  background: url("../res/peak.jpg");
+}
+.menu .item-shell .item .popout #n3 {
+  background: url("../res/lighthouse.jpg");
+}
+.menu .item-shell .item .popout #n4 {
+  background: url("../res/surf.jpg");
+}
+.menu .item-shell .item .popout .text {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: -100%;
+  text-transform: uppercase;
+  opacity: .5;
+  font-weight: 600;
+  font-size: 30px;
+  mix-blend-mode: luminosity;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .menu .item-shell .item:hover {
   width: 342px;
@@ -337,7 +419,7 @@ header#left #title {
 .menu .item-shell .item:hover .popout {
   display: block;
   visibility: visible;
-  width: 258px;
+  width: 100%;
 }
 .root:hover #menu {
   visibility: visible;
@@ -451,10 +533,9 @@ section#content h1 {
 }
 footer#bottom {
   height: auto;
-  background: #000;
+  background: transparent;
   padding-left: 42px;
   padding-right: 42px;
-  color: white;
   padding-bottom: 42px;
 }
 footer#bottom a {
@@ -468,7 +549,6 @@ footer#bottom a {
   overflow: hidden;
 }
 footer#bottom a:hover {
-  color: #FFF;
   font-weight: 400;
 }
 footer#bottom #color {
@@ -491,6 +571,7 @@ footer#bottom #content #left {
 footer#bottom #content #right {
   width: 50%;
   float: right;
+  text-align: right;
 }
 footer#bottom #content #right .color1 {
   color: #DC8022;

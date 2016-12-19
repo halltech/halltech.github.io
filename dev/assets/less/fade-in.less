@@ -8,7 +8,7 @@ div.fade {
 	width: 100%;
 	// opacity: 1;
 
-	animation: 0.0s fadeIn .5s forwards;
+	animation: 1500ms fadeIn forwards;
 	background: #FFF;
 
 	display: flex;
@@ -17,9 +17,14 @@ div.fade {
 
 	// #logo {
 		img {
-			width: 50px;
-			animation: grow 2s 5 ease-in-out;
-			opacity: .3;
+			width: 70px;
+			opacity: 1;
+			position: relative;
+			// top: 500px;
+			opacity: 0.3;
+
+			// animation: grow 4s 5 ease-in-out;
+			animation: 1500ms linear moveLogo;
 		}
 	// }
 }
@@ -27,13 +32,12 @@ div.fade {
 @keyframes fadeIn {
 	from {
 		background: #FFF;
+	}
+	50% {
+		background: #FFF;
 		opacity: 1;
 	}
-	15% {
-		background: #000;
-		opacity: 1;
-	}
-	55% {
+	60% {
 		background: #000;
 		opacity: 1;
 	}
@@ -48,18 +52,20 @@ div.fade {
 	}
 }
 
-@keyframes grow {
+@keyframes moveLogo {
 	from {
-		transform: scale(.8);
+		// transform: scale(.8);
+		// top: 500px;
 		opacity: .3;
+		transform: scale(1);
 	}
-	50% {
-		transform: scale(1.5);
+	60% {
 		opacity: 1;
 	}
 	to {
-		transform: scale(.8);
-		opacity: .3;
+		// transform: scale(.8);
+		// top: -500px;
+		opacity: 1;
 	}
 }
 

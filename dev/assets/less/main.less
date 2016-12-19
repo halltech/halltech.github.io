@@ -147,6 +147,40 @@ header#left {
 				display: none;
 				visibility: hidden;
 				height: 100%;
+				width: 100%;
+
+				.image {
+					width: 100%;
+					height: 100%;
+				}
+				#n1 {
+					background: url("../res/forest.jpg");
+				}
+				#n2 {
+					background: url("../res/peak.jpg");
+				}
+				#n3 {
+					background: url("../res/lighthouse.jpg");
+				}
+				#n4 {
+					background: url("../res/surf.jpg");
+				}
+				.text {
+					width: 100%;
+					height: 100%;
+					position: relative;
+					top: -100%;
+					text-transform: uppercase;
+					opacity: .5;
+					font-weight: 600;
+					font-size: 30px;
+					mix-blend-mode: luminosity;
+ 					color: white;
+
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+				}
 			}
 		}
 
@@ -181,7 +215,7 @@ header#left {
 	.popout {
 		display: block;
 		visibility: visible;
-		width: 300px - @sidebar-width;
+		width: 100%;
 	}
 }
 
@@ -335,10 +369,9 @@ section#content {
 // footer & footer content
 footer#bottom {
 	height: auto;
-	background: @accent-main;
+	background: transparent;
 	padding-left: @sidebar-width;
 	padding-right: @sidebar-width;
-	color: white;
 	padding-bottom: @sidebar-width;
 
 	a {
@@ -352,7 +385,6 @@ footer#bottom {
 		overflow: hidden;
 	}
 	a:hover {
-		color: #FFF;
 		font-weight: 400;
 	}
 	
@@ -367,6 +399,7 @@ footer#bottom {
 			#30119A 50%,#BF1BAE 60%,
 			#BF1BAE 70%,#702076 80%,
 			#702076 90%);
+
 	}
 	#content {
 		width: 100%;
@@ -383,6 +416,7 @@ footer#bottom {
 		#right {
 			width: 50%;
 			float: right;
+			text-align: right;
 			.color1 {
 				color: #DC8022;
 			}
